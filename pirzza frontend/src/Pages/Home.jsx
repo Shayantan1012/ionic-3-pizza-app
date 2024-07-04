@@ -1,10 +1,14 @@
 import pizza2 from '../assets/pizza2.png'
+import cook from'../assets/cooking1.png'
+import icon1 from'../assets/orderFood.png'
+import icon2 from'../assets/pickup.png'
+import icon3 from'../assets/enjoy.png'
 function Home(){
 return(
     <div >
    <section className=" flex flex-col-reverse items-center justify-items-center py-4 justify-center md:flex-row  bg-gradient-to-r from-amber-50 to-orange-300">
 
-    < div className=" w-4/6 ml-4 flex flex-col justify-between  text-4xl text-center md:w-2/6 md:text-left">
+    < div className=" w-4/6 ml-4 flex flex-col justify-between  text-5xl text-center md:w-2/6 md:text-left">
     <div className="flex justify-center md:justify-start">
             <div className="flex flex-row justify-between ">
                  
@@ -26,9 +30,9 @@ return(
                         Order Now
                     </button>
                     <span className="transition-transform ease-in-out hover:translate-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
                     </span>
 
                 </div>
@@ -44,7 +48,89 @@ return(
     </div>
 
     </section>
+    <section className='flex flex-col md:flex-row  justify-center md:justify-between mb-2 py-5 md:flex-row bg-gradient-to-r space-x-* from-amber-50 to-orange-300 mt-2'>
+        <div className='mt-7 mb-7 ml-7 flex items-center rounded-3xl'>
+            <img className='rounded-3xl'
+             src={cook}
+             width={400}
+             height={400}
+             />
+        </div>
+        <div className='basis-[50%] flex flex-col justify-center md:justify-start '>
+                <div className='text-5xl font-extrabold bg-gradient-to-l mt-6 ml-4 from-orange-400 to-red-500 text-transparent bg-clip-text'>
+                    Cooked by the best <br/> chefs in the world
+                </div>
+                    <p className='text-base mt-3 leading-relaxed font-semibold text-orange-600'>
+                There are many benifits regarding to that but the main ones are:
+                    </p>
+                <div>
+                    <div className='flex flex-row items-center  ml-7 mt-7 justify-start'>
+                    <div className='text-amber-500 w-10 h-10 flex items-center justify-center'>
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                            </svg>
+                        </div>
+                        <div className='text-3xl font-bold ml-5 bg-gradient-to-l  from-orange-400 to-red-500 text-transparent bg-clip-text'>
+                            <span> Perfect Test</span>           
+                        </div>
 
+                    </div>
+                    <div className='flex flex-row items-center  ml-7 mt-7 justify-start '>
+                        <div className='text-amber-500 w-10 h-10 flex items-center justify-center'>
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                            </svg>
+                        </div>
+                        <div className='text-3xl font-bold ml-5 bg-gradient-to-l  from-orange-400 to-red-500 text-transparent bg-clip-text'>
+                            <span> Prepair Quickly</span>           
+                        </div>
+
+                    </div>
+                    <div className='flex flex-row items-center  ml-7 mt-7 justify-start'>
+                        <div className='text-amber-500 w-10 h-10 flex items-center justify-center' >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                            </svg>
+                        </div>
+                        <div className='text-3xl font-bold ml-5 bg-gradient-to-l  from-orange-400 to-red-500 text-transparent bg-clip-text'>
+                            <span> Food hygeine guaranted</span>           
+                        </div>
+
+                    </div>
+                </div>
+                <div className='flex justify-between  mr-3 mt-9'>
+                    <div className='flex flex-col mr-5 mt-6  border-solid border-orange-400 border-2 p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
+                        <div className='rounded-full bg bg-slate-50 text-center h-20 w-20 mb-5 flex items-center justify-center'>
+                                <img
+                                src={icon1}
+                                />
+                        </div>
+                        <div className='font-bold text-xl mb-3'>Order Food</div>
+                        <p className='text-center italic'>As easy as 1,2,3 <br/> Just select your <br/>favorite pirzza and<br/> place your order </p>
+                    </div>
+                    <div className='flex flex-col mr-5 mt-6  border-solid border-orange-400 border-2 p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
+                        <div className='rounded-full bg bg-slate-50  text-center h-20 w-20 mb-5 flex items-center justify-center'>
+                                <img
+                                src={icon2}
+                                />
+                        </div>
+                        <div className='font-bold text-xl mb-3'>Pickup Food</div>
+                        <p className='text-center italic'> Pick up your order<br/> from the nearest<br/> store or get it <br/>delivered to your <br/>doorstep. </p>
+                    </div>
+                    <div className='flex flex-col mr-5 mt-6  border-solid border-orange-400 border-2 p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
+                        <div className='rounded-full bg bg-slate-50  text-center h-20 w-20 mb-5 flex items-center justify-center'>
+                                <img
+                                src={icon3}
+                                />
+                        </div>
+                        <div className='font-bold text-xl mb-3'>Order Food</div>
+                        <p className='text-center italic'>As soon as you get<br/> your order, enjoy the<br/> delicious pizza with<br/> your loved ones.
+                        </p>
+                    </div>
+                </div>
+
+        </div>
+    </section>
     </div>
 )
 }
