@@ -3,9 +3,13 @@ import cook from'../assets/cooking1.png'
 import icon1 from'../assets/orderFood.png'
 import icon2 from'../assets/pickup.png'
 import icon3 from'../assets/enjoy.png'
+import Footer from '../Components/Footer';
+import Header from '../Components/header';
 function Home(){
 return(
     <div >
+            <Header/>
+
    <section className=" flex flex-col-reverse items-center justify-items-center py-4 justify-center md:flex-row  bg-gradient-to-r from-amber-50 to-orange-300">
 
     < div className=" w-4/6 ml-4 flex flex-col justify-between  text-5xl text-center md:w-2/6 md:text-left">
@@ -99,7 +103,7 @@ return(
                     </div>
                 </div>
                 <div className='flex justify-between  mr-3 mt-9'>
-                    <div className='flex flex-col mr-5 mt-6  border-solid border-orange-400 border-2 p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
+                    <div className='flex flex-col mr-5 mt-6   p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
                         <div className='rounded-full bg bg-slate-50 text-center h-20 w-20 mb-5 flex items-center justify-center'>
                                 <img
                                 src={icon1}
@@ -108,7 +112,7 @@ return(
                         <div className='font-bold text-xl mb-3'>Order Food</div>
                         <p className='text-center italic'>As easy as 1,2,3 <br/> Just select your <br/>favorite pirzza and<br/> place your order </p>
                     </div>
-                    <div className='flex flex-col mr-5 mt-6  border-solid border-orange-400 border-2 p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
+                    <div className='flex flex-col mr-5 mt-6   p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
                         <div className='rounded-full bg bg-slate-50  text-center h-20 w-20 mb-5 flex items-center justify-center'>
                                 <img
                                 src={icon2}
@@ -117,7 +121,7 @@ return(
                         <div className='font-bold text-xl mb-3'>Pickup Food</div>
                         <p className='text-center italic'> Pick up your order<br/> from the nearest<br/> store or get it <br/>delivered to your <br/>doorstep. </p>
                     </div>
-                    <div className='flex flex-col mr-5 mt-6  border-solid border-orange-400 border-2 p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
+                    <div className='flex flex-col mr-5 mt-6   p-2 rounded-2xl shadow-2xl hover:shadow-none justify-center items-center'>
                         <div className='rounded-full bg bg-slate-50  text-center h-20 w-20 mb-5 flex items-center justify-center'>
                                 <img
                                 src={icon3}
@@ -131,6 +135,8 @@ return(
 
         </div>
     </section>
+    <Footer/>
+
     </div>
 )
 }

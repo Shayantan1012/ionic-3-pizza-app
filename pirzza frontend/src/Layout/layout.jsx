@@ -1,10 +1,12 @@
 import React from 'react';
+import Footer from '../Components/Footer';
+import Header from '../Components/header';
 function Layout({child}){
 return (
     <div>
-        <nav>Navber</nav>
+        <nav><Header/></nav>
          {child}
-        <footer> Footer</footer>
+        <footer> <Footer/></footer>
     </div>
 )
 }
