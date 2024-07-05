@@ -4,7 +4,7 @@ import pizzalogo from '../assets/pizza1.png'
 function Header(){
 
     return (
-        <div className='flex flex-row justify-between bg-gradient-to-r from-amber-50 to-orange-300 mb-1'>
+        <div className='flex flex-row justify-between bg-gradient-to-r from-amber-50 to-orange-300 '>
        <div className="flex items-center gap-3">
                 <div className="font-semibold text-slate-400">
                     Pizza App
