@@ -5,7 +5,18 @@ import icon2 from'../assets/pickup.png'
 import icon3 from'../assets/enjoy.png'
 import Footer from '../Components/Footer';
 import Header from '../Components/header';
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllProducts } from '../Redux/Slice/ProductSlice'
+import { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 function Home(){
+const dispatch=useDispatch();
+const navigate=useNavigate();
+useEffect(()=>{
+    dispatch(getAllProducts());
+
+},[])
+const{productsData}=useSelector((state)=>(state.product));
 return(
     <div >
             <Header/>
@@ -30,7 +41,7 @@ return(
             <div className="flex justify-center md:justify-start">
                 <div className="flex  justify-items-center items-center  basis-[40%] px-4 py-2 rounded-md justify-between bg-yellow-400 hover:bg-yellow-200">
                     
-                    <button className=" text-xl font-semibold    ">
+                    <button className=" text-xl font-semibold" onClick={()=>navigate('/product/allProduct')}>
                         Order Now
                     </button>
                     <span className="transition-transform ease-in-out hover:translate-x-2">
@@ -135,8 +146,46 @@ return(
 
         </div>
     </section>
-    <Footer/>
+    <div className="mx-auto">
+                <div className="flex flex-wrap justify-center">
+                    {productsData.map((item) => {
+                        return (
+                            item.inStock && (
+                                <div className="p-4 md:w-1/3" key={item._id}>
+                                    <Link to={`/product/${item._id}`}>
+                                        <div className="overflow-hidden border rounded-lg border-opacity-60">
+                                            <img 
+                                                src={item.productImage}
+                                                alt="Pizza Image"
+                                                className="object-cover object-center w-full lg:h-48 md:h-36"
+                                            />
+                                            <div className="p-6 border">
+                                                <h2 className="text-xs font-medium tracking-widest text-gray-400 title-font">
+                                                    {item.category}
+                                                </h2>
+                                                <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">
+                                                    {item.productName}
+                                                </h1>
+                                                <p className="mb-4 text-base leading-relaxed">
+                                                    {item.description}
+                                                </p>
+                                                <p className="text-lg font-medium text-gray-900 title-font">
+                                                    ${item.price}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )
+                        )
+                    })}
+                </div>
+            </div>
 
+            
+
+    <Footer/>
+     
     </div>
 )
 }

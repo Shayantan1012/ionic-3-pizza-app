@@ -1,8 +1,13 @@
 import { useState } from "react";
 import SignUpPresentation from "./SignUpPresentation/";
 import toast from 'react-hot-toast';
+import { useDispatch } from "react-redux";
+import{useNavigate} from 'react-router-dom'
+import { createAccount } from "../../Redux/Slice/AuthSlice";
 function SignUp(){
-
+  
+ const navigate=useNavigate();
+  const dispatch=useDispatch();
 const [signUpState,setSignUpState]=useState({
 firstName:'',
 email:'',
@@ -16,9 +21,9 @@ setSignUpState({
     [name]:value,
 })
  }
-function handelFormSubmit(e){
-    e.preventDefault();
-    console.log(signUpState);
+async function handelFormSubmit(e){
+  e.preventDefault();
+  console.log(signUpState);
 if(!signUpState.firstName || !signUpState.firstName ||!signUpState.mobileNumber || !signUpState.password){
 toast.error("Please fill the all boxes!!!!");
 return ;
@@ -35,8 +40,11 @@ if(!signUpState.email.includes('@') || !signUpState.email.includes('.')){
             toast.error("Please give a valid emailId!!!!");
             return ;
         }
-        
-        console.log(signUpState);
+const apiRespone=await dispatch(createAccount(signUpState));
+console.log("This is api response->",apiRespone);
+        if(apiRespone.payload.data.success){
+          navigate('/auth/login')
+        }
 return ;
     }
 
