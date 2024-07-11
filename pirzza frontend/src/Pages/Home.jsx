@@ -14,8 +14,8 @@ const dispatch=useDispatch();
 const navigate=useNavigate();
 useEffect(()=>{
     dispatch(getAllProducts());
-
 },[])
+
 const{productsData}=useSelector((state)=>(state.product));
 return(
     <div >
