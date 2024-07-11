@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SignUpPresentation from "./SignUpPresentation/";
+import SignUpPresentation from "./SignUpPresentation";
 import toast from 'react-hot-toast';
 import { useDispatch } from "react-redux";
 import{useNavigate} from 'react-router-dom'
